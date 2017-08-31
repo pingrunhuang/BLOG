@@ -21,7 +21,7 @@ pre{
 
 header {
   background-color: #263d36;
-  background-image: url('header.png');
+  /*background-image: url('header.png');*/
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
