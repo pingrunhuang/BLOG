@@ -1,6 +1,5 @@
 HBase is an open source distributed database built on top of hadoop eco-system. It is becoming a popular choice for application who need fast and random access to large amount of data. In this post, I want to explain my summary on reading the paper written by Amandeep khurana on explaining the design of HBase architecture. In hadoop, HBASE has components called Master and regionserver.
-
-* * *
+***
 
 ### [](#HBase-data-model "HBase data model")HBase data model
 
@@ -9,12 +8,14 @@ HBase is an open source distributed database built on top of hadoop eco-system. 
 1.  _Table_ : data are stored into tables whose names are strings and composed with characters that are safe for use in a file system path.
 2.  _Row_ : each row is a data entry identified with row keys (like the primary key in relational database). Row keys have no data type and are treated as a byte[] (byte array).
 3.  _Column Family_ : data within a row are grouped by column family. It should be defined up front since this will impact the physical arrangement of how data are stored in HBase.  
-    `Question: why do you think it is necessary to have column family? I think`
+> Question: why do you think it is necessary to have column family?
+My thought:
+
 4.  _Column qualifier_ : Data within a column family is addressed via its column quali er, or simply, column. Need not defined up front since it is `dynamic`. Like Row keys, they are treated as byte[].
 5.  _Cell_ : where data are actually stored. It is treated as byte[] too.
 6.  _Time stamp_ : each cell are versioned with timestamp which is the time when the value is inserted by default.
 
-![How the concepts above are actually mapped to the real table](/2017/04/01/Design-of-Hbase-architecture/1.jpg "How the concepts above are actually mapped to the real table")
+![How the concepts above are actually mapped to the real table](/static/images/HBase_design/HBase_table_design.jpg "How the concepts above are actually mapped to the real table")
 
 ##### [](#From-the-view-of-key-value "From the view of key-value:")From the view of key-value:
 
