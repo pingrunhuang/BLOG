@@ -18,7 +18,7 @@ Also, we can transform the label to y1 = 1 and y2 = -1 which goes to the next eq
 `y * (w * v + b) = 1 ==> y * (w * v + b) - 1 = 0`  
 If the target point satisfy the equation above, we say it is right classified.
 
-### [](#Process "Process")Process
+### Process
 
 The basic ideas to get the best separating hyperplane is to first find the margins for each class.
 
@@ -35,7 +35,7 @@ from `y * (w * v + b) - 1 = 0` we get
 In order to maximize the width, we need to minimize the |w| which also means we need to minimize `1/2 * pow(|w|)`. By doing so, we can transform the optimization target into optimizing a quadratic problem which is more easy to solve.  
 According to lagarange, `L(w,b) = 1/2 * pow(|w|) - sum(alpha[i] * (y[i] * (v[i] + b) -1))`
 
-### [](#Convex-optimization "Convex optimization")Convex optimization
+### Convex optimization
 
 For dealing with the optimization problem, python provide some library to achieve that. Including:
 

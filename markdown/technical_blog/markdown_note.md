@@ -13,7 +13,7 @@ Making bold font?
 
 Making header?
 
-# [](#header-means-first-level-header-header-means-second-level-header-etc "header means first level header, ## header means second level header etc.")header means first level header, ## header means second level header etc.
+\# header means first level header, \#\# header means second level header etc.
 
 Making link?
 
@@ -44,8 +44,8 @@ means >blabla
 
 Unordered list
 
-*   Milk
-*   Eggs  
+* Milk
+* Eggs  
     By adding * before each element.
 
 Inline Code

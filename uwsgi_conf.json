@@ -1,0 +1,8 @@
+{
+  "uwsgi": {
+    "socket": ["/tmp/uwsgi.sock", "127.0.0.1:8080"],
+    "master": true,
+    "workers": 3,
+    "module": "blog:life_blog"
+  }
+}

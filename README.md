@@ -37,6 +37,20 @@ Then clone this repo and run command `cp blog/* <your-blog-name>`
 Open the <blog>/settings.py and in the row *INSTALLED_APPS* append '<blog-name>', 'markdown_deux' into the dictionary.
 
 
+### deploy on server
+```
+# install wsgi
+pip install uwsgi
+
+sudo mkdir -p /etc/uwsgi/sites
+
+cp blog.wsgi /etc/uwsgi/sites
+
+cd /etc/uwsgi/sites
+
+# run uwsgi
+uwsgi --http :8000 --wsgi-file <python_file>
+```
 
 
 
